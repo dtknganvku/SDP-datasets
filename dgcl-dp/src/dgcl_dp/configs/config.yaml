@@ -1,0 +1,45 @@
+defaults:
+  - _self_
+  - experiment: table3
+
+mode: train
+manifest: manifests/primary
+output: artifacts/table3
+seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+models: [majority, loc, inverse_loc, lr, rf, svm, hgb, metric_mlp, ast_sage, fusion_mlp, dual_no_cl, infonce, random_mask, clone_mask, dgcl]
+primary: true
+mlflow: false
+collection_cutoff: '2026-10-31T23:59:59Z'
+model:
+  name: dgcl
+  hidden: 128
+  projection: 64
+  dropout: 0.3
+  k: 5
+  batch_size: 64
+  temperature: 0.1
+  contrastive_weight: 0.5
+  negative_mode: overlap
+  graph_control: knn
+  metric_graph: true
+  view: both
+  code_kind: sage
+  fusion: concat
+  lr: 0.001
+  weight_decay: 0.0001
+  max_epochs: 200
+  patience: 20
+  max_nodes: 2000
+  first_nodes: null
+  device: cpu
+search:
+  enabled: true
+  trials: 20
+  seed: 10
+  confirmation_seeds: [11, 12]
+  top: 3
+hydra:
+  job:
+    chdir: false
+  run:
+    dir: ${output}/hydra/${now:%Y-%m-%d_%H-%M-%S}

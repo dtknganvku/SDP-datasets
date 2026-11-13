@@ -1,0 +1,18 @@
+# @package _global_
+experiment:
+  name: demo
+  description: Synthetic software smoke test; never research evidence
+manifest: artifacts/demo/fixture
+output: artifacts/demo/run
+primary: false
+seeds: [0, 1]
+models: [lr, dgcl]
+search:
+  enabled: false
+model:
+  hidden: 16
+  projection: 8
+  k: 2
+  max_epochs: 3
+  patience: 2
+  batch_size: 8

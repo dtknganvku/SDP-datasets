@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+outputs/
+artifacts/*
+!artifacts/.gitkeep
+!artifacts/local-archive-audit.json
+manifests/private/
+ket-qua-dgcl.zip
+.DS_Store
