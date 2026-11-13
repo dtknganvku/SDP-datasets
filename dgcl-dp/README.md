@@ -4,6 +4,14 @@ Dự đoán lỗi mã Java bằng đồ thị cú pháp và đồ thị độ đ
 Yêu cầu **Python 3.11.11**; `uv` sẽ tự quản lý môi trường riêng.
 Demo tự tạo dữ liệu giả để kiểm tra chương trình, **không phải kết quả nghiên cứu**.
 
+## Pipeline đề xuất
+
+![DGCL-DP end-to-end pipeline](paper/figures/dgcl-pipeline.png)
+
+[Tải PNG 300 dpi](paper/figures/dgcl-pipeline.png) hoặc
+[mở bản chỉnh sửa bằng draw.io](paper/figures/dgcl-pipeline.drawio).
+Khối tô vàng thể hiện đóng góp đề xuất: chọn mẫu âm có xét chồng lấn vùng tiếp nhận.
+
 ## Google Colab / Kaggle
 
 Tạo notebook mới. Với Kaggle, bật **Settings → Internet**. Demo chạy được bằng CPU.

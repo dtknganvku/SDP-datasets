@@ -10,3 +10,4 @@ artifacts/*
 manifests/private/
 ket-qua-dgcl.zip
 .DS_Store
+.drawio-tmp/
