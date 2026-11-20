@@ -1,0 +1,18 @@
+# @package _global_
+experiment:
+  name: pilot
+  description: Reduced historical pilot on archive code + metric CSVs; never confirmatory evidence
+manifest: manifests/pilot
+output: artifacts/pilot/run1
+primary: false
+seeds: [0, 1, 2]
+models: [majority, lr, rf, dgcl]
+search:
+  enabled: false
+model:
+  hidden: 64
+  projection: 32
+  k: 5
+  batch_size: 32
+  max_epochs: 30
+  patience: 5
